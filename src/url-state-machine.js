@@ -1,5 +1,4 @@
 "use strict";
-const tr46 = require("tr46");
 
 const infra = require("./infra");
 const { utf8DecodeWithoutBOM } = require("./encoding");
@@ -428,14 +427,9 @@ function serializeHost(host) {
   return host;
 }
 
-function domainToASCII(domain, beStrict = false) {
-  const result = tr46.toASCII(domain, {
-    checkBidi: true,
-    checkHyphens: false,
-    checkJoiners: true,
-    useSTD3ASCIIRules: beStrict,
-    verifyDNSLength: beStrict
-  });
+function domainToASCII(domain) {
+  const result = domain;
+
   if (result === null || result === "") {
     return failure;
   }
