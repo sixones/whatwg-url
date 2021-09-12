@@ -3,9 +3,11 @@ on:
   pull_request:
     branches:
     - master
+    - whatwg-url-without-unicode
   push:
     branches:
     - master
+    - whatwg-url-without-unicode
 jobs:
   build:
     name: Lint and tests
