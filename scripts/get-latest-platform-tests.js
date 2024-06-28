@@ -23,7 +23,7 @@ process.on("unhandledRejection", err => {
 // 1. Go to https://github.com/web-platform-tests/wpt/tree/master/url
 // 2. Press "y" on your keyboard to get a permalink
 // 3. Copy the commit hash
-const commitHash = "eb8bdce552a2a9b10010f7755ed9d8d0773d548e";
+const commitHash = "72b915d4b3754f081ef5899bf6a777efe71b2fc5";
 
 const urlPrefix = `https://raw.githubusercontent.com/web-platform-tests/wpt/${commitHash}/url/`;
 const targetDir = path.resolve(__dirname, "..", "test", "web-platform-tests");
@@ -48,6 +48,7 @@ for (const file of [
   "urlsearchparams-get.any.js",
   "urlsearchparams-has.any.js",
   "urlsearchparams-set.any.js",
+  "urlsearchparams-size.any.js",
   "urlsearchparams-sort.any.js",
   "urlsearchparams-stringifier.any.js"
 ]) {

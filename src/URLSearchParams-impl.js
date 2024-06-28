@@ -39,6 +39,10 @@ exports.implementation = class URLSearchParamsImpl {
     }
   }
 
+  get size() {
+    return this._list.length;
+  }
+
   append(name, value) {
     this._list.push([name, value]);
     this._updateSteps();
